@@ -1,0 +1,243 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,400italic,700italic);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 5px;
+  padding-bottom: 10px; }
+
+h2 {
+  font-size: 2.4em;
+  font-weight: bold;
+  margin: 5px;
+  padding-bottom: 10px; }
+
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 5px;
+  padding-bottom: 10px; }
+
+h4 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 5px;
+  padding-bottom: 10px; }
+
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 5px 0;
+  padding-bottom: 10px; }
+
+h6 {
+  font-size: 0.875em;
+  font-weight: bold;
+  margin: 5px;
+  padding-bottom: 10px; }
+
+p {
+  font-size: 0.875em;
+  line-height: 1.2;
+  padding-bottom: 5px; }
+
+a:link {
+  text-decoration: none; }
+
+button {
+  font-size: 0.875em;
+  display: block;
+  float: left;
+  border: none;
+  outline: none; }
+
+input {
+  font-size: 0.875em;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none; }
+  input:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.07); }
+
+input[type='text'] {
+  padding: 0 10px;
+  height: 40px;
+  width: 100%; }
+
+input[type='password'] {
+  padding: 0 10px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-image: url(http://subtlepatterns.com/patterns/zigzag.png);
+  background-repeat: repeat;
+  font-family: 'Open Sans', Arial, sans-serif; }
+
+nav {
+  position: fixed;
+  height: 100%;
+  display: block;
+  background-color: #141414;
+  box-shadow: 3px 0px 4px rgba(0, 0, 0, 0.4); }
+  nav ul li:after {
+    content: "";
+    display: table;
+    clear: both; }
+  nav ul li .active_link {
+    border-right: 3px red solid;
+    background-color: #1a1a1a; }
+    nav ul li .active_link:hover {
+      border-right: 3px red solid; }
+  nav ul li a {
+    border-right: 3px #141414 solid;
+    padding: 5px 30px 5px 10px;
+    display: block;
+    color: #fff;
+    font-size: 0.875em; }
+    nav ul li a:after {
+      content: "";
+      display: table;
+      clear: both; }
+    nav ul li a:hover {
+      background-color: #1a1a1a;
+      border-right: 3px #1a1a1a solid; }
+    nav ul li a i {
+      font-size: 2.5em;
+      padding: 10px;
+      color: #fff; }
+  nav .minimize {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-top: 1px solid #111; }
+    nav .minimize a {
+      display: block;
+      padding: 10px;
+      color: #fff; }
+      nav .minimize a:after {
+        content: "";
+        display: table;
+        clear: both; }
+      nav .minimize a i {
+        float: right; }
+
+.container {
+  width: 100%;
+  padding: 10px;
+  border-left: 170px solid transparent; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .container ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .container ul li {
+    display: block;
+    float: left;
+    margin: 10px;
+    width: 246px;
+    height: 430px; }
+    .container ul li a {
+      position: relative;
+      display: block; }
+      .container ul li a .thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #222;
+        border: 3px solid #fff;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
+        .container ul li a .thumb:after {
+          content: "";
+          display: table;
+          clear: both; }
+        .container ul li a .thumb:hover > .thumbnail {
+          background-position: 0px 31px;
+          transition: all .2s; }
+        .container ul li a .thumb:hover > .thumbnail > .title {
+          opacity: 1; }
+        .container ul li a .thumb .thumbnail {
+          width: 240px;
+          height: 420px;
+          transition: all .2s; }
+          .container ul li a .thumb .thumbnail .title {
+            background-color: #fff;
+            background-image: url("../assets/pop-icon.jpg");
+            background-position: 215px 30px;
+            background-repeat: no-repeat;
+            padding: 5px 0 8px 0;
+            display: block;
+            opacity: 0; }
+            .container ul li a .thumb .thumbnail .title:after {
+              content: "";
+              display: table;
+              clear: both; }
+            .container ul li a .thumb .thumbnail .title h5 {
+              padding: 5px 0 0 10px;
+              font-size: 0.875em;
+              color: #141414;
+              margin: 0; }
+            .container ul li a .thumb .thumbnail .title span {
+              font-size: 0.7em;
+              padding: 5px 10px;
+              display: block;
+              color: #666; }
