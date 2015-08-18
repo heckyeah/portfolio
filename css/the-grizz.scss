@@ -13,10 +13,13 @@
 		background-image: url(../img/the-grizz/rope.png);
 		background-repeat: no-repeat;
 		background-position: top center;
+		background-color: transparent;
+		transition: background-color 2s;
 		article {
 			width: 700px;
 			margin: 0 auto 60px auto;
 			padding: 60px 0 0 0;
+			transition: background-image 3s;
 			@include clearfix;
 			.content {
 				position: relative;
@@ -46,6 +49,7 @@
 						width: 380px;
 						margin: 0 auto;
 						box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+						z-index: 1;
 						&:hover {
 							cursor: pointer;
 						}
@@ -76,22 +80,27 @@
 			display: none;
 			.modal-image {
 				position: relative;
-				margin: 10px auto;
-				width: 635px;
+				height: 95%;
+				padding: 10px;
+				text-align: center;
 				@include clearfix;
 				img {
 					display: block;
 					margin: 0 auto;
 					max-width: 100%;
-					height: auto;
+					max-height: 100%;
 				}
 				.close {
 					position: absolute;
 					top: 20px;
 					right: 20px;
-					a {
+					button {
 						color: #fff;
 						font-size: 1.5em;
+						background-color: transparent;
+						&:hover {
+							cursor: pointer;
+						}
 					}
 				}
 			}
@@ -113,7 +122,19 @@
 		overflow: hidden;
 	}
 
+	.light {
+		background-image: url(../img/the-grizz/light.png);
+		background-position: top center;
+		background-repeat: no-repeat;
+		transition: background-image 3s;
+	}
+
+	.dark {
+		background-color: rgba(0,0,0,.7);
+	}
+
 	.lock {
+		transition: background-color 2s;
 		display: block !important;
 	}
 }
