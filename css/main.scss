@@ -1,5 +1,6 @@
 @import "mixin";
 @import "preset-text";
+@import "the-grizz";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,400italic,700italic);
 
 @include css-reset;
@@ -7,6 +8,10 @@
 @include links;
 @include buttons;
 @include inputs;
+
+// designs
+
+@include the-grizz;
 
 * {
 	margin: 0;
@@ -22,8 +27,6 @@ html, body {
 }
 
 body {
-	background-image: url(http://subtlepatterns.com/patterns/zigzag.png);
-	background-repeat: repeat;
 	font-family: 'Open Sans', Arial, sans-serif;
 }
 
