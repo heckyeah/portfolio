@@ -1,6 +1,5 @@
 @import "mixin";
 @import "preset-text";
-@import "the-grizz";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,400italic,700italic);
 
 @include css-reset;
@@ -8,10 +7,6 @@
 @include links;
 @include buttons;
 @include inputs;
-
-// designs
-
-@include the-grizz;
 
 * {
 	margin: 0;
@@ -27,6 +22,7 @@ html, body {
 }
 
 body {
+	background-image: url(http://subtlepatterns.com/patterns/pw_maze_black.png);
 	font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -53,6 +49,9 @@ nav {
 				color: #fff;
 				font-size: 0.875em;
 				@include clearfix;
+				@include small {
+					padding: 5px 10px 5px 10px;
+				}
 				&:hover {
 					background-color: #1a1a1a;
 					border-right: 3px #1a1a1a solid;
@@ -61,6 +60,11 @@ nav {
 					font-size: 2.5em;
 					padding: 10px;
 					color: #fff;
+				}
+				span {
+					@include small {
+						display: none;
+					}
 				}
 			}
 		}
@@ -72,6 +76,31 @@ nav {
 		width: 100%;
 		background-color: #1a1a1a;
 		border-top: 1px solid #111;
+		display: block;
+		@include small {
+			display: none;
+		}
+		a {
+			display: block;
+			padding: 10px;
+			color: #fff;
+			@include clearfix;
+			i {
+				float: right;
+			}
+		}
+	}
+	.maximize {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: #1a1a1a;
+		border-top: 1px solid #111;
+		display: none;
+		@include small {
+			display: none;
+		}
 		a {
 			display: block;
 			padding: 10px;
@@ -89,8 +118,19 @@ nav {
 	padding: 10px;
 	border-left: 170px solid transparent;
 	@include clearfix;
+	@include small {
+			border-left: 60px solid transparent;
+		}
 	ul {
+		width: 800px;
+		margin: 0 auto;
 		@include clearfix;
+		@include large {
+			width: 532px;
+		}
+		@include medium {
+			width: 267px;
+		}
 		li {
 			display: block;
 			float: left;
@@ -127,6 +167,9 @@ nav {
 							padding: 5px 0 8px 0;
 							display: block;
 							opacity: 0;
+							@include small {
+								opacity: 1;
+							}
 							@include clearfix;
 							h5 {
 								padding: 5px 0 0 10px;

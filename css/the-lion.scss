@@ -1,0 +1,79 @@
+@import "mixin";
+@import "preset-text";
+
+@include css-reset;
+@include text;
+@include links;
+@include buttons;
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	background-image: url(../img/the-lion/background.jpg);
+	background-repeat: repeat-x;
+	background-position: top center;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.lion-container {
+	position: relative;
+	article {
+		width: 700px;
+		margin: 40px auto;
+		.video {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			height: 0;
+			box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+			width: 100%;
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background-color: #151515;
+		padding: 0 10px;
+		line-height: 50px;
+		box-shadow: -1px 0px 5px rgba(0,0,0,.5);
+		.center {
+			text-align: center;
+			@include clearfix;
+			h6 {
+				color: #fff;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				a {
+					color: #fff;
+				}
+			}
+			p {
+				line-height: 50px;
+				color: #fff;
+				display: inline-block;
+				margin: 0 5px;
+				padding: 0;
+				a {
+					color: #fff;
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+}

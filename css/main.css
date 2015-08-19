@@ -112,150 +112,6 @@ input[type='text'] {
 input[type='password'] {
   padding: 0 10px; }
 
-body {
-  background-color: #160d08;
-  background-image: url(../img/the-grizz/background.jpg);
-  background-repeat: repeat-x;
-  background-position: top center;
-  font-family: 'Open Sans', Arial, sans-serif; }
-
-.grizz-container {
-  background-image: url(../img/the-grizz/rope.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-color: transparent;
-  transition: background-color 2s; }
-  .grizz-container article {
-    width: 700px;
-    margin: 0 auto 60px auto;
-    padding: 60px 0 0 0;
-    transition: background-image 3s; }
-    .grizz-container article:after {
-      content: "";
-      display: table;
-      clear: both; }
-    @media only screen and (max-width: 720px) {
-      .grizz-container article {
-        width: 480px; } }
-    @media only screen and (max-width: 520px) {
-      .grizz-container article {
-        width: 100%; } }
-    .grizz-container article .content {
-      position: relative;
-      padding: 10px 0; }
-      .grizz-container article .content:after {
-        content: "";
-        display: table;
-        clear: both; }
-      .grizz-container article .content .description {
-        background-color: #fff;
-        width: 100%;
-        float: left;
-        padding: 20px;
-        margin: 10px 0;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
-        .grizz-container article .content .description h5 {
-          padding: 0; }
-        .grizz-container article .content .description p {
-          line-height: 1.4; }
-      .grizz-container article .content .thumbnail {
-        float: left;
-        width: 100%;
-        margin: 10px 0;
-        text-align: center; }
-        .grizz-container article .content .thumbnail img {
-          border: 20px solid #fff;
-          max-width: 380px;
-          margin: 0 auto;
-          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
-          .grizz-container article .content .thumbnail img:hover {
-            cursor: pointer; }
-    .grizz-container article .video {
-      position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 */
-      height: 0;
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
-      .grizz-container article .video iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-  .grizz-container .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none; }
-    .grizz-container .modal .modal-image {
-      position: relative;
-      height: 95%;
-      padding: 10px;
-      text-align: center; }
-      .grizz-container .modal .modal-image:after {
-        content: "";
-        display: table;
-        clear: both; }
-      .grizz-container .modal .modal-image img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        max-height: 100%; }
-      .grizz-container .modal .modal-image .close {
-        position: absolute;
-        top: 20px;
-        right: 20px; }
-        .grizz-container .modal .modal-image .close button {
-          color: #fff;
-          font-size: 1.5em;
-          background-color: transparent; }
-          .grizz-container .modal .modal-image .close button:hover {
-            cursor: pointer; }
-  .grizz-container .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #151515;
-    padding: 0 10px;
-    line-height: 50px;
-    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.5); }
-    .grizz-container .footer h6 {
-      color: #fff;
-      display: block;
-      float: left;
-      padding: 0;
-      margin: 0; }
-      .grizz-container .footer h6 a {
-        color: #fff; }
-    .grizz-container .footer p {
-      line-height: 50px;
-      color: #fff;
-      display: block;
-      float: left;
-      margin: 0 5px; }
-      .grizz-container .footer p a {
-        color: #fff;
-        padding: 0 5px; }
-
-.overflow {
-  overflow: hidden; }
-
-.light {
-  background-image: url(../img/the-grizz/light.png);
-  background-position: top center;
-  background-repeat: no-repeat;
-  transition: background-image 3s; }
-
-.dark {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-.lock {
-  transition: background-color 2s;
-  display: block !important; }
-
 * {
   margin: 0;
   padding: 0;
@@ -268,6 +124,7 @@ html, body {
   height: 100%; }
 
 body {
+  background-image: url(http://subtlepatterns.com/patterns/pw_maze_black.png);
   font-family: 'Open Sans', Arial, sans-serif; }
 
 nav {
@@ -295,6 +152,9 @@ nav {
       content: "";
       display: table;
       clear: both; }
+    @media only screen and (max-width: 520px) {
+      nav ul li a {
+        padding: 5px 10px 5px 10px; } }
     nav ul li a:hover {
       background-color: #1a1a1a;
       border-right: 3px #1a1a1a solid; }
@@ -302,13 +162,20 @@ nav {
       font-size: 2.5em;
       padding: 10px;
       color: #fff; }
+    @media only screen and (max-width: 520px) {
+      nav ul li a span {
+        display: none; } }
   nav .minimize {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #1a1a1a;
-    border-top: 1px solid #111; }
+    border-top: 1px solid #111;
+    display: block; }
+    @media only screen and (max-width: 520px) {
+      nav .minimize {
+        display: none; } }
     nav .minimize a {
       display: block;
       padding: 10px;
@@ -319,6 +186,27 @@ nav {
         clear: both; }
       nav .minimize a i {
         float: right; }
+  nav .maximize {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-top: 1px solid #111;
+    display: none; }
+    @media only screen and (max-width: 520px) {
+      nav .maximize {
+        display: none; } }
+    nav .maximize a {
+      display: block;
+      padding: 10px;
+      color: #fff; }
+      nav .maximize a:after {
+        content: "";
+        display: table;
+        clear: both; }
+      nav .maximize a i {
+        float: right; }
 
 .container {
   width: 100%;
@@ -328,58 +216,73 @@ nav {
     content: "";
     display: table;
     clear: both; }
-  .container ul:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .container ul li {
-    display: block;
-    float: left;
-    margin: 10px;
-    width: 246px;
-    height: 430px; }
-    .container ul li a {
-      position: relative;
-      display: block; }
-      .container ul li a .thumb {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #222;
-        border: 3px solid #fff;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
-        .container ul li a .thumb:after {
-          content: "";
-          display: table;
-          clear: both; }
-        .container ul li a .thumb:hover > .thumbnail {
-          background-position: 0px 31px;
-          transition: all .2s; }
-        .container ul li a .thumb:hover > .thumbnail > .title {
-          opacity: 1; }
-        .container ul li a .thumb .thumbnail {
-          width: 240px;
-          height: 420px;
-          transition: all .2s; }
-          .container ul li a .thumb .thumbnail .title {
-            background-color: #fff;
-            background-image: url("../assets/pop-icon.jpg");
-            background-position: 215px 30px;
-            background-repeat: no-repeat;
-            padding: 5px 0 8px 0;
-            display: block;
-            opacity: 0; }
-            .container ul li a .thumb .thumbnail .title:after {
-              content: "";
-              display: table;
-              clear: both; }
-            .container ul li a .thumb .thumbnail .title h5 {
-              padding: 5px 0 0 10px;
-              font-size: 0.875em;
-              color: #141414;
-              margin: 0; }
-            .container ul li a .thumb .thumbnail .title span {
-              font-size: 0.7em;
-              padding: 5px 10px;
+  @media only screen and (max-width: 520px) {
+    .container {
+      border-left: 60px solid transparent; } }
+  .container ul {
+    width: 800px;
+    margin: 0 auto; }
+    .container ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media only screen and (max-width: 1000px) {
+      .container ul {
+        width: 532px; } }
+    @media only screen and (max-width: 775px) {
+      .container ul {
+        width: 267px; } }
+    .container ul li {
+      display: block;
+      float: left;
+      margin: 10px;
+      width: 246px;
+      height: 430px; }
+      .container ul li a {
+        position: relative;
+        display: block; }
+        .container ul li a .thumb {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #222;
+          border: 3px solid #fff;
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
+          .container ul li a .thumb:after {
+            content: "";
+            display: table;
+            clear: both; }
+          .container ul li a .thumb:hover > .thumbnail {
+            background-position: 0px 31px;
+            transition: all .2s; }
+          .container ul li a .thumb:hover > .thumbnail > .title {
+            opacity: 1; }
+          .container ul li a .thumb .thumbnail {
+            width: 240px;
+            height: 420px;
+            transition: all .2s; }
+            .container ul li a .thumb .thumbnail .title {
+              background-color: #fff;
+              background-image: url("../assets/pop-icon.jpg");
+              background-position: 215px 30px;
+              background-repeat: no-repeat;
+              padding: 5px 0 8px 0;
               display: block;
-              color: #666; }
+              opacity: 0; }
+              @media only screen and (max-width: 520px) {
+                .container ul li a .thumb .thumbnail .title {
+                  opacity: 1; } }
+              .container ul li a .thumb .thumbnail .title:after {
+                content: "";
+                display: table;
+                clear: both; }
+              .container ul li a .thumb .thumbnail .title h5 {
+                padding: 5px 0 0 10px;
+                font-size: 0.875em;
+                color: #141414;
+                margin: 0; }
+              .container ul li a .thumb .thumbnail .title span {
+                font-size: 0.7em;
+                padding: 5px 10px;
+                display: block;
+                color: #666; }
