@@ -1,6 +1,6 @@
-// Show cover modal
-$( function() {
-  // Click to show modal
+// Show larger image
+$('document').ready(function() {
+  // Click to show larger image
   $("img#popup").click( function( event ) {
     event.stopPropagation();
     // write classes and css to tags
@@ -21,15 +21,16 @@ $( function() {
   });
 });
 
-$( function() {
-  // Click to show modal
+// Hover image effect
+$('document').ready(function() {
+  // mouseover image to intiate affect
   $("img#popup").mouseover( function( event ) {
     event.stopPropagation();
     // write classes and css to tags
     $("article").addClass('light');
     $(".grizz-container").addClass('dark');
   });
-  // make the background close the modal on click
+  // mouseout will return to normal mode
   $("img#popup").mouseout( function() {
     // change body css and remove classes
     $("article").removeClass('light');

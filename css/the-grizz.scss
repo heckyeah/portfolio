@@ -21,6 +21,12 @@
 			padding: 60px 0 0 0;
 			transition: background-image 3s;
 			@include clearfix;
+			@include medium {
+				width: 480px;
+			}
+			@include small {
+				width: 100%;
+			}
 			.content {
 				position: relative;
 				padding: 10px 0;
@@ -46,10 +52,9 @@
 					text-align: center;
 					img {
 						border: 20px solid #fff;
-						width: 380px;
+						max-width: 380px;
 						margin: 0 auto;
 						box-shadow: 1px 1px 3px rgba(0,0,0,.5);
-						z-index: 1;
 						&:hover {
 							cursor: pointer;
 						}
@@ -111,10 +116,29 @@
 			bottom: 0;
 			width: 100%;
 			background-color: #151515;
-			padding: 10px 0;
+			padding: 0 10px;
+			line-height: 50px;
 			box-shadow: -1px 0px 5px rgba(0,0,0,.5);
-			p {
+			h6 {
 				color: #fff;
+				display: block;
+				float: left;
+				padding:0;
+				margin: 0;
+				a {
+					color: #fff;
+				}
+			}
+			p {
+				line-height: 50px;
+				color: #fff;
+				display: block;
+				float: left;
+				margin: 0 5px;
+				a {
+					color: #fff;
+					padding: 0 5px;
+				}
 			}
 		}
 	}

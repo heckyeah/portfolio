@@ -134,6 +134,12 @@ body {
       content: "";
       display: table;
       clear: both; }
+    @media only screen and (max-width: 720px) {
+      .grizz-container article {
+        width: 480px; } }
+    @media only screen and (max-width: 520px) {
+      .grizz-container article {
+        width: 100%; } }
     .grizz-container article .content {
       position: relative;
       padding: 10px 0; }
@@ -159,10 +165,9 @@ body {
         text-align: center; }
         .grizz-container article .content .thumbnail img {
           border: 20px solid #fff;
-          width: 380px;
+          max-width: 380px;
           margin: 0 auto;
-          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-          z-index: 1; }
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
           .grizz-container article .content .thumbnail img:hover {
             cursor: pointer; }
     .grizz-container article .video {
@@ -214,10 +219,26 @@ body {
     bottom: 0;
     width: 100%;
     background-color: #151515;
-    padding: 10px 0;
+    padding: 0 10px;
+    line-height: 50px;
     box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.5); }
+    .grizz-container .footer h6 {
+      color: #fff;
+      display: block;
+      float: left;
+      padding: 0;
+      margin: 0; }
+      .grizz-container .footer h6 a {
+        color: #fff; }
     .grizz-container .footer p {
-      color: #fff; }
+      line-height: 50px;
+      color: #fff;
+      display: block;
+      float: left;
+      margin: 0 5px; }
+      .grizz-container .footer p a {
+        color: #fff;
+        padding: 0 5px; }
 
 .overflow {
   overflow: hidden; }
