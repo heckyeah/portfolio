@@ -6,6 +6,18 @@
 @include links;
 @include buttons;
 
+
+@keyframes sun {
+    0%   {background-position: center 200px;}
+    100% {background-position: center 0px;}
+}
+
+@keyframes sky {
+    0%   {background-color: #0a2135;}
+    25% {background-color: #a52348;}
+    100% {background-color: #f06d06;}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,11 +29,41 @@
 
 body {
 	background-color: #000;
-	background-image: url(../img/the-lion/background.jpg);
-	background-repeat: repeat-x;
-	background-position: top center;
 	font-family: 'Open Sans', Arial, sans-serif;
 }
+.sky {
+	animation-name: sky;
+    animation-duration: 8s;
+	background-color: #f06d06;
+	height: 200px;
+	width: 100%;
+}
+
+.sun {
+	animation-name: sun;
+    animation-duration: 8s;
+    animation-timing-function:ease;
+	position: absolute;
+    background-image: url(../img/the-lion/sun.png);
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+}
+
+.tree {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../img/the-lion/background.png);
+	background-repeat: repeat-x;
+	background-position: top center;
+	width: 100%;
+	height: 210px;
+}
+
 
 .lion-container {
 	position: relative;
