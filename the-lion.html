@@ -12,10 +12,37 @@
 <div class="sky"></div>
 	<div class="lion-container">
 		<article>
+			<div class="share">
+				<ul>
+					<li><span>Share on:</span></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+				</ul>
+			</div>
 			<div class="video">
 				<iframe src="https://www.youtube.com/embed/i9kYI0bazJ4" frameborder="0" allowfullscreen></iframe>
 			</div>
+			<div class="content">
+				<div class="image">
+					<div class="image-hover" id="popup"><i class="fa fa-search-plus"></i></div>
+					<img src="img/the-lion/lion-poster.jpg" alt="">
+				</div>
+				<div class="description">
+					<h5>Spirit Animal - The Lion [Poster]</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique voluptatum doloremque quasi, expedita recusandae blanditiis assumenda temporibus voluptatem, dicta ipsam repellendus consectetur cupiditate beatae et facilis! Aliquid labore, voluptatum vero.</p>
+				</div>
+			</div>
 		</article>
+
+		<div class="modal">
+			<div class="modal-image">
+				<div class="close">
+					<button id="close"><i class="fa fa-times"></i></button>
+				</div>
+				<img class="image" src="img/the-lion/poster-modal.jpg" alt="">
+			</div>
+		</div>
+
 		<div class="footer">
 			<div class="center">
 				<p><a href="#"><i class="fa fa-arrow-left"></i></a></p>
@@ -24,5 +51,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/show.js"></script>
 </body>
 </html>

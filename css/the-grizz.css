@@ -150,11 +150,35 @@ body {
           padding: 0; }
         .grizz-container article .content .description p {
           line-height: 1.4; }
+      .grizz-container article .content .share {
+        padding: 10px 0; }
+        .grizz-container article .content .share:after {
+          content: "";
+          display: table;
+          clear: both; }
+        .grizz-container article .content .share ul {
+          float: right; }
+          .grizz-container article .content .share ul li {
+            float: left;
+            padding: 0 5px; }
+            .grizz-container article .content .share ul li a {
+              font-size: 1.5em;
+              color: #eee; }
+              .grizz-container article .content .share ul li a:hover {
+                color: #E02378; }
+            .grizz-container article .content .share ul li span {
+              line-height: 22px;
+              font-size: 0.775em;
+              color: #eee; }
       .grizz-container article .content .thumbnail {
         float: left;
         width: 100%;
         margin: 10px 0;
         text-align: center; }
+        .grizz-container article .content .thumbnail:after {
+          content: "";
+          display: table;
+          clear: both; }
         .grizz-container article .content .thumbnail img {
           border: 20px solid #fff;
           max-width: 380px;

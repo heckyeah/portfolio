@@ -1,7 +1,7 @@
 // Show larger image
 $('document').ready(function() {
   // Click to show larger image
-  $("img#popup").click( function( event ) {
+  $("#popup").click( function( event ) {
     event.stopPropagation();
     // write classes and css to tags
     $("body, html").addClass('overflow');
@@ -24,14 +24,14 @@ $('document').ready(function() {
 // Hover image effect
 $('document').ready(function() {
   // mouseover image to intiate affect
-  $("img#popup").mouseover( function( event ) {
+  $("#popup").mouseover( function( event ) {
     event.stopPropagation();
     // write classes and css to tags
     $("article").addClass('light');
     $(".grizz-container").addClass('dark');
   });
   // mouseout will return to normal mode
-  $("img#popup").mouseout( function() {
+  $("#popup").mouseout( function() {
     // change body css and remove classes
     $("article").removeClass('light');
     $(".grizz-container").removeClass('dark');

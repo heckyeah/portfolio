@@ -1,0 +1,47 @@
+@import "mixin";
+@import "preset-text";
+
+@include css-reset;
+@include text;
+@include links;
+@include buttons;
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #000;
+	background-image: url(../img/jake-miller/bottom.jpg);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.container {
+	.top {
+		background-image: url(../img/jake-miller/top.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+		height: 110px;
+	}
+	article {
+		background: linear-gradient(270deg, #b6258b, #ed2246);
+		padding: 20px 0;
+		@include clearfix;
+		.preview {
+			background-color: #fff;
+			text-align: center;
+		}
+	}
+}

@@ -60,11 +60,35 @@ body {
 					line-height: 1.4;
 				}
 			}
+			.share {
+				@include clearfix;
+				padding: 10px 0;
+				ul {
+					float: right;
+					li {
+						float: left;
+						padding: 0 5px;
+						a {
+							font-size: 1.5em;
+							color: #eee;
+							&:hover {
+								color: #E02378;
+							}
+						}
+						span {
+							line-height: 22px;
+							font-size: 0.775em;
+							color: #eee;
+						}
+					}
+				}
+			}
 			.thumbnail {
 				float: left;
 				width: 100%;
 				margin: 10px 0;
 				text-align: center;
+				@include clearfix;
 				img {
 					border: 20px solid #fff;
 					max-width: 380px;
